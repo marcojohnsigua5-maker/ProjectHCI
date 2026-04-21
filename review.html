@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gear Reviews - TechJourney</title>
+<link rel="icon" href="icon.jpg" type="image/icon">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00eaff;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #00eaff, #00ff88);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00eaff;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+    object-fit: cover;   
+    border: 2px solid #00eaff; 
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5); 
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.header-title {
+    margin-bottom: 40px;
+}
+
+.header-title h1 {
+    font-size: 36px;
+    color: #00eaff;
+}
+
+.header-title p {
+    opacity: 0.7;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00eaff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+.premium { background: rgba(0, 234, 255, 0.2); color: #00eaff; border: 1px solid #00eaff; }
+.budget { background: rgba(0, 255, 136, 0.2); color: #00ff88; border: 1px solid #00ff88; }
+.flagship { background: rgba(255, 170, 0, 0.2); color: #ffaa00; border: 1px solid #ffaa00; }
+
+.review-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stars { color: #00eaff; font-weight: 600; }
+.score { font-size: 18px; font-weight: 700; }
+
+footer {
+    text-align: center;
+    padding: 50px;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    header { padding: 20px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logos.png" alt="logo">
+        <span>TECHJOURNEY</span>
+    </div>
+    <nav>
+        <a href="HCI.html">Home</a>
+        <a href="innovation.html">Innovations</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="header-title">
+        <h1>Latest Reviews</h1>
+        <p>Honest takes on the latest tech and gadgets in the industry.</p>
+    </div>
+
+    <div class="reviews-grid">
+        
+        <div class="review-card">
+            <div>
+                <span class="badge premium">Premium Gear</span>
+                <h3>RTX 5090 Series</h3>
+                <p>Unmatched performance for 8K gaming, but the power consumption and price are through the roof.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="score">9.8</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge budget">Best Value</span>
+                <h3>Keychron V-Series</h3>
+                <p>The best entry-level mechanical keyboard for enthusiasts. Solid build quality for a low price.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="score">8.5</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge premium">Editor's Choice</span>
+                <h3>Apple Vision Pro 2</h3>
+                <p>Significant weight reduction and better battery life make this the current king of mixed reality.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="score">9.2</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge flagship">Flagship Audio</span>
+                <h3>Sony WH-1000XM6</h3>
+                <p>The gold standard for noise cancellation. Improved transparency mode and AI-driven EQ settings.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="score">9.5</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge budget">Budget King</span>
+                <h3>Logitech G305 Lightspeed</h3>
+                <p>Still the best wireless gaming mouse for the price. Zero lag and incredible battery endurance.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="score">8.9</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge premium">Portable Pro</span>
+                <h3>iPad Pro (M4 Chip)</h3>
+                <p>Thinner than ever with the new OLED display. It's essentially a MacBook without the keyboard.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="score">9.0</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge flagship">Elite Mobile</span>
+                <h3>Samsung S26 Ultra</h3>
+                <p>The 200MP camera is now enhanced with real-time AI processing. Best screen in any smartphone today.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="score">9.4</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div>
+                <span class="badge budget">Smart Living</span>
+                <h3>Xiaomi Smart Band 9</h3>
+                <p>Cheap, reliable, and has a 2-week battery life. Perfect for those who just want basic fitness tracking.</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="score">7.8</span>
+            </div>
+        </div>
+        <div class="review-card">
+            <div>
+                <span class="badge premium">Healty</span>
+                <h3>Malunggay Pandesal</h3>
+                <p>Cheap, Healty, Easy to buy, then you'll eat it everymorning with a hot cup of coffee and then you'll be in a daze</p>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★★★★★★</span>
+                <span class="score">10000</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 TechJourney | The Future is Now 🚀
+</footer>
+
+</body>
+</html>
